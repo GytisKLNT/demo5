@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Add your property for sale</h1>
+      <p>Yes, you can sell where you live and get cash!!</p>
+    </header>
+    <main>
+      <div class="formContainer">
+        <h4>Add Property</h4>
+        <form name="forma">
+          <label for="img">Img</label> <br />
+          <input
+            type="text"
+            id="img"
+            placeholder="https://google.com/logo.png"
+          />
+          <br />
+          <label for="img">Price, EUR</label><br />
+          <input type="number" id="price" placeholder="50000" /><br />
+          <label for="des">Description</label><br />
+          <textarea
+            name="description"
+            id="des"
+            cols="30"
+            rows="10"
+            placeholder="anything you would like to say?"
+          ></textarea>
+          <br />
+
+          <label for="miestas">City</label> <br />
+
+          <select name="miestas" id="miestas">
+            <option value="vilnius">Vilnius</option>
+            <option value="kaunas">Kaunas</option>
+            <option value="klaipeda">Kalipėda</option>
+          </select>
+          <br />
+
+          <button type="submit">Add property</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
