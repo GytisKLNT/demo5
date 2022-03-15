@@ -1,0 +1,66 @@
+header {
+  background: rgb(11, 227, 175);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 227, 175, 1) 0%,
+    rgba(11, 209, 165, 1) 100%
+  );
+  color: white;
+  font-family: sans-serif;
+  padding: 1.5rem 5rem;
+  line-height: 0.7rem;
+}
+
+header h1 {
+  font-weight: 400;
+}
+
+header p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.856);
+}
+
+main {
+  font-family: sans-serif;
+  padding: 1.5rem 5rem;
+}
+
+main .mygtukai {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .mygtukai .miestoBtn {
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 2px solid rgb(206, 206, 206);
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  transition: 0.3s;
+}
+
+main .mygtukai .miestoBtn:hover {
+  border: 2px solid rgb(11, 227, 175);
+  color: rgb(11, 227, 175);
+}
+
+main .mygtukai .miestoBtn:focus {
+  border: 2px solid rgb(11, 227, 175);
+  color: rgb(11, 227, 175);
+}
+
+.addProp a {
+  background-color: rgb(11, 227, 175);
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.25rem;
+  transition: 0.3s;
+}
+
+.addProp a:hover {
+  background-color: rgb(9, 150, 117);
+}
