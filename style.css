@@ -41,15 +41,19 @@ main .mygtukai .miestoBtn {
   transition: 0.3s;
 }
 
-main .mygtukai .miestoBtn:hover {
+.paspaustas {
   border: 2px solid rgb(11, 227, 175);
   color: rgb(11, 227, 175);
+}
+
+/* main .mygtukai .miestoBtn:hover {
+  
 }
 
 main .mygtukai .miestoBtn:focus {
   border: 2px solid rgb(11, 227, 175);
   color: rgb(11, 227, 175);
-}
+} */
 
 .addProp a {
   background-color: rgb(11, 227, 175);

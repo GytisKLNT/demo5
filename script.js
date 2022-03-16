@@ -1,24 +1,6 @@
-const getData = async () => {
-  try {
-    const res = await fetch("https://radial-reinvented-shoe.glitch.me");
-    const data = await res.json();
-    if (data.length > 0) {
-      console.log(data);
-      return data.forEach((item) => {
-        console.log(item.image);
-        addHouse(item);
-      });
-    }
-
-    return alert("No data found...");
-  } catch (error) {
-    return alert(error.message || "An error has happened");
-  }
-};
+const container = document.querySelector(".container");
 
 function addHouse(data) {
-  const container = document.querySelector(".container");
-
   const house = document.createElement("div");
   house.className = "houseBox";
 
@@ -51,5 +33,40 @@ function addHouse(data) {
 
   container.appendChild(house);
 }
+
+let filterCities = [];
+
+const getData = async () => {
+  try {
+    const res = await fetch(
+      `https://radial-reinvented-shoe.glitch.me/${filterCities.join()}`
+    );
+    const data = await res.json();
+
+    if (data.length > 0) {
+      container.innerHTML = "";
+      return data.forEach((item) => {
+        addHouse(item);
+      });
+    }
+
+    return alert("No data found...");
+  } catch (error) {
+    return alert(error.message || "An error has happened");
+  }
+};
+
+document.querySelectorAll(".button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    if (e.target.classList.contains("paspaustas")) {
+      filterCities = filterCities.filter((x) => x !== e.target.textContent);
+    } else {
+      filterCities.push(e.target.textContent);
+      console.log(filterCities);
+    }
+    getData();
+    e.target.classList.toggle("paspaustas");
+  });
+});
 
 getData();
