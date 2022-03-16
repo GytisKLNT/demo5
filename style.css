@@ -32,7 +32,7 @@ main .mygtukai {
   align-items: center;
 }
 
-main .mygtukai .miestoBtn {
+.miestoBtn {
   background-color: white;
   border-radius: 0.25rem;
   border: 2px solid rgb(206, 206, 206);
@@ -46,14 +46,9 @@ main .mygtukai .miestoBtn {
   color: rgb(11, 227, 175);
 }
 
-/* main .mygtukai .miestoBtn:hover {
-  
+.indeksai {
+  margin-top: 1rem;
 }
-
-main .mygtukai .miestoBtn:focus {
-  border: 2px solid rgb(11, 227, 175);
-  color: rgb(11, 227, 175);
-} */
 
 .addProp a {
   background-color: rgb(11, 227, 175);

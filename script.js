@@ -35,11 +35,12 @@ function addHouse(data) {
 }
 
 let filterCities = [];
+let index = 0;
 
 const getData = async () => {
   try {
     const res = await fetch(
-      `https://radial-reinvented-shoe.glitch.me/${filterCities.join()}`
+      `https://radial-reinvented-shoe.glitch.me/${index}/${filterCities.join()}`
     );
     const data = await res.json();
 
@@ -66,6 +67,18 @@ document.querySelectorAll(".button").forEach((button) => {
     }
     getData();
     e.target.classList.toggle("paspaustas");
+  });
+});
+
+document.querySelectorAll(".ibutton").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    index = Number(e.target.textContent);
+
+    getData();
+    document.querySelectorAll(".ibutton").forEach((btn) => {
+      btn.classList.remove("paspaustas");
+    });
+    e.target.classList.add("paspaustas");
   });
 });
 
